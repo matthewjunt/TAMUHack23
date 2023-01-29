@@ -1,0 +1,48 @@
+let answers = {};
+let characters = [    {        name: "Ashe",        personality: {            extraversion: "Introverted",            dominance: "Low",            risktaking: "Low",            conscientiousness: "High",            agreeableness: "High",            attentionseeking: "Low",            independence: "High",            openness: "Low",            sociability: "Low",            control: "Low",            creativity: "Low",            organization: "High",            teamwork: "Low",            leadership: "High",            competition: "Low",            strategy: "Low",            problemsolving: "Low",            adventure: "Low",            uniqueness: "Low"        }    },    {        name: "Ezreal",        personality: {            extraversion: "Outgoing",            dominance: "Low",            risktaking: "High",            conscientiousness: "Low",            agreeableness: "Low",            attentionseeking: "High",            independence: "High",            openness: "High",            sociability: "Low",            control: "Low",            creativity: "High",            organization: "Low",            teamwork: "Low",            leadership: "Low",            competition: "High",            strategy: "Low",            problemsolving: "High",            adventure: "High",            uniqueness: "High"        }    },    // Add more characters here];
+
+let questions = [    {        prompt: "Are you outgoing or introverted?",        options: ["Outgoing", "Introverted"],
+        type: "extraversion"
+    },
+    // Add more questions here
+];
+
+let matchScore = {};
+
+function askQuestions() {
+    for (let i = 0; i < questions.length; i++) {
+        let question = questions[i];
+        let answer = prompt(question.prompt);
+        answers[question.type] = answer;
+    }
+}
+
+function findMatch() {
+    for (let i = 0; i < characters.length; i++) {
+        let character = characters[i];
+        let score = 0;
+        for (let trait in character.personality) {
+            if (character.personality[trait] === answers[trait]) {
+                score++;
+            }
+        }
+        matchScore[character.name] = score;
+    }
+}
+
+function getMatch() {
+    let maxScore = 0;
+    let match;
+    for (let character in matchScore) {
+        if (matchScore[character] > maxScore) {
+            maxScore = matchScore[character];
+            match = character;
+        }
+    }
+    return match;
+}
+
+askQuestions();
+findMatch();
+let result = getMatch();
+console.log("You are most like " + result);
