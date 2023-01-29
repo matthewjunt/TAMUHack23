@@ -1362,7 +1362,7 @@ const champArray = [
     }
 ];
 
-var questions = [{q: }]
+// var questions = [{q: }]
 
 // create an algorithm that finds which champions are the best match for the user
 function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
@@ -1389,7 +1389,6 @@ function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     );
     // Console.log the top 3 champions
     alert("The top 3 champions for you are: " + closestChampArray[0][0] + ", " + closestChampArray[1][0] + ", and " + closestChampArray[2][0] + ".")
-    // TODO: Grab each image -> alert(closestChampArray[0][0].toLowerCase() + ".png");
     return [closestChampArray[0][0], closestChampArray[1][0], closestChampArray[2][0]];
 }
 
@@ -1418,6 +1417,8 @@ const Home = () => {
         cam_total += parseInt(e.target.getAttribute('cam'));
         bad_total += parseInt(e.target.getAttribute('bad'));
         
+        
+
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
         console.log(text);
@@ -1455,25 +1456,12 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="championContainer">
-                    Your champions are: 
-                    <div id="spacer">SPACER</div>
-                    <div className="champImageContainer">
-                        <div className="champImage">
-                            <img src={require("./res/img/icons/aatrox.png")}></img>
-                            <div className="champName">Aatrox</div>
-                        </div>
-                        <div className="champImage">
-                            <img src={require("./res/img/icons/ahri.png")}></img>
-                            <div className="champName">Ahri</div>
-                        </div>
-                        <div className="champImage">
-                            <img src={require("./res/img/icons/akali.png")}></img>
-                            <div className="champName">Akali</div>
-                        </div>
+                <div className="questionContainer">
+                    Test the algorithm here!
+                    <div className="question" onClick={()=>championAlgorithm(10,10,10,10,10,10,10,10)}>
+                        Click on this.
                     </div>
                 </div>
-
             </body>
         </div>
     );
