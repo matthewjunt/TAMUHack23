@@ -1,13 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, useNavigate } from 'react-router-dom';
+import React from "react";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Home from './Home';
 
 const App = () => {
   return (
-    <Router>
-      <Route path="/" element={<Home />} />
-    </Router>
-  );
+  <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+    </BrowserRouter>  );
 }
 
 export default App;
