@@ -1,12 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
+import './Base.css';
+
+
 
 const Home = () => {
     const navigate = useNavigate();
     return (
         <div>
-        <h1>Home</h1>
-        <button onClick={() => navigate('/about')}>About</button>
+            <body>
+                Hello World.
+            </body>
         </div>
     );
 }
