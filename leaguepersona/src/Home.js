@@ -2305,12 +2305,12 @@ const Home = () => {
                     hi -> FOR TESTING PURPOSES, click this to apply finalAniamtion
                 </div> */}
 
-                <div className="questionContainer">
+                {/* <div className="questionContainer">
                     Test the algorithm here!
                     <div className="question" onClick={()=>championAlgorithm(10,10,10,10,10,10,10,10)}>
                         Click on this.
                     </div>
-                </div>
+                </div> */}
 
             </body>
         </div>
