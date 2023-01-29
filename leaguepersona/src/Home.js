@@ -1362,6 +1362,748 @@ const champArray = [
     }
 ];
 
+
+// question array to store the questions, and answers with each answer having a ss,qa,cal,linc,pas,cac,cam,bad value associated with it
+var questions = [
+    {
+        q: "How do you handle criticism?",
+        a: [
+            {
+                ans: "I take it to heart and try to improve.",
+                ss: 9,
+                qa: 3,
+                cal: 5,
+                lin: 2,
+                pas: 7,
+                cac: 7,
+                cam: 1,
+                bad: 3
+            },
+            {
+                ans: "I brush it off and move on.",
+                ss: 2,
+                qa: 6,
+                cal: 3,
+                lin: 5,
+                pas: 5,
+                cac: 2,
+                cam: 6,
+                bad: 8
+            },
+            {
+                ans: "I become defensive and argue my point.",
+                ss: 0,
+                qa: 8,
+                cal: 4,
+                lin: 1,
+                pas: 2,
+                cac: 3,
+                cam: 5,
+                bad: 7
+            },
+            {
+                ans: "I take it as a learning opportunity and try to grow.",
+                ss: 7,
+                qa: 4,
+                cal: 8,
+                lin: 3,
+                pas: 6,
+                cac: 6,
+                cam: 2,
+                bad: 5
+            }
+        ]
+    },
+    {
+        q: "How do you handle difficult conversations?",
+        a: [
+            {
+                ans: "I try to talk it out.",
+                ss: 7,
+                qa: 4,
+                cal: 6,
+                lin: 5,
+                pas: 7,
+                cac: 8,
+                cam: 3,
+                bad: 5
+            },
+            {
+                ans: "I use humor to lighten the mood.",
+                ss: 2,
+                qa: 5,
+                cal: 3,
+                lin: 8,
+                pas: 4,
+                cac: 9,
+                cam: 7,
+                bad: 4
+            },
+            {
+                ans: "I remain calm and try to find a solution.",
+                ss: 8,
+                qa: 5,
+                cal: 9,
+                lin: 4,
+                pas: 7,
+                cac: 5,
+                cam: 2,
+                bad: 5
+            },
+            {
+                ans: "I stand up for those who need help.",
+                ss: 6,
+                qa: 9,
+                cal: 5,
+                lin: 2,
+                pas: 8,
+                cac: 6,
+                cam: 3,
+                bad: 8
+            }
+        ]
+    },
+    {
+        q: "How do you feel about manipulation?",
+        a: [
+            {
+                ans: "It makes me uncomfortable.",
+                ss: 8,
+                qa: 4,
+                cal: 5,
+                lin: 6,
+                pas: 9,
+                cac: 7,
+                cam: 1,
+                bad: 4
+            },
+            {
+                ans: "I'm okay with it as long as it doesn't hurt anyone.",
+                ss: 5,
+                qa: 3,
+                cal: 4,
+                lin: 5,
+                pas: 7,
+                cac: 5,
+                cam: 4,
+                bad: 4,
+            },
+            {
+                ans: "I enjoy it when it works in my favor.",
+                ss: 3,
+                qa: 5,
+                cal: 6,
+                lin: 4,
+                pas: 2,
+                cac: 4,
+                cam: 8,
+                bad: 5,
+            },
+            {
+                ans: "I love coming up with sneaky plans.",
+                ss: 1,
+                qa: 5,
+                cal: 7,
+                lin: 3,
+                pas: 2,
+                cac: 2,
+                cam: 10,
+                bad: 3,
+            }
+        ]
+    },
+    {
+        q: "Do you prefer to work alone or with a team?",
+        a: [
+            {
+                ans: "Alone",
+                ss: 7,
+                qa: 4,
+                cal: 6,
+                lin: 9,
+                pas: 2,
+                cac: 3,
+                cam: 6,
+                bad: 5
+            },
+            {
+                ans: "With a team",
+                ss: 5,
+                qa: 7,
+                cal: 5,
+                lin: 3,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 7
+            },
+            {
+                ans: "It depends on the situation",
+                ss: 6,
+                qa: 6,
+                cal: 8,
+                lin: 6,
+                pas: 7,
+                cac: 7,
+                cam: 6,
+                bad: 6
+            },
+            {
+                ans: "I do, only if I lead the team",
+                ss: 3,
+                qa: 8,
+                cal: 7,
+                lin: 4,
+                pas: 5,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            }
+        ]
+    },
+    {
+        q: "Which of the following ways would your friend describe you?",
+        a: [
+            {
+                ans: "Dependable and loyal.",
+                ss: 9,
+                qa: 3,
+                cal: 6,
+                lin: 5,
+                pas: 8,
+                cac: 7,
+                cam: 2,
+                bad: 4
+            },
+            {
+                ans: "Bold and daring.",
+                ss: 3,
+                qa: 9,
+                cal: 5,
+                lin: 2,
+                pas: 5,
+                cac: 4,
+                cam: 5,
+                bad: 9
+            },
+            {
+                ans: "Clever and witty.",
+                ss: 4,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 9,
+                bad: 5
+            },
+            {
+                ans: "Protective and supportive.",
+                ss: 7,
+                qa: 5,
+                cal: 5,
+                lin: 5,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 7
+            }
+        ]
+    },
+    {
+        q: "When interacting with strangers, are you typically:",
+        a: [
+            {
+                ans: "Open and friendly.",
+                ss: 5,
+                qa: 4,
+                cal: 6,
+                lin: 4,
+                pas: 6,
+                cac: 9,
+                cam: 5,
+                bad: 7
+            },
+            {
+                ans: "Inquisitive and observant.",
+                ss: 7,
+                qa: 5,
+                cal: 8,
+                lin: 6,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 5
+            },
+            {
+                ans: "Playful and cheerful.",
+                ss: 3,
+                qa: 4,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 9,
+                cam: 6,
+                bad: 6
+            },
+            {
+                ans: "Reserved and analytical.",
+                ss: 8,
+                qa: 2,
+                cal: 9,
+                lin: 8,
+                pas: 5,
+                cac: 3,
+                cam: 4,
+                bad: 3
+            }
+        ]
+    },
+    {
+        q: "When it comes to taking risks, I am usually:",
+        a: [
+            {
+                ans: "Cautious and calculated.",
+                ss: 9,
+                qa: 2,
+                cal: 8,
+                lin: 6,
+                pas: 7,
+                cac: 6,
+                cam: 4,
+                bad: 4
+            },
+            {
+                ans: "Fearless and confident.",
+                ss: 3,
+                qa: 9,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Resourceful and creative.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 8,
+                pas: 5,
+                cac: 7,
+                cam: 7,
+                bad: 6
+            },
+            {
+                ans: "Careful and considerate.",
+                ss: 8,
+                qa: 4,
+                cal: 6,
+                lin: 7,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            }
+        ]
+    },
+    {
+        q: "When making a decision, I am usually:",
+        a: [
+            {
+                ans: "Logical and rational.",
+                ss: 8,
+                qa: 2,
+                cal: 9,
+                lin: 8,
+                pas: 5,
+                cac: 4,
+                cam: 4,
+                bad: 4
+            },
+            {
+                ans: "Energetic and passionate.",
+                ss: 4,
+                qa: 8,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Creative and imaginative.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "Patient and thorough.",
+                ss: 9,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            }
+        ]
+    },
+    {
+        q: "When I am bored, I am usually:",
+        a: [
+            {
+                ans: "Curious and imaginative.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "Calm and relaxed.",
+                ss: 8,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            },
+            {
+                ans: "Energetic and active.",
+                ss: 4,
+                qa: 8,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Analytical and methodical.",
+                ss: 9,
+                qa: 2,
+                cal: 9,
+                lin: 8,
+                pas: 5,
+                cac: 4,
+                cam: 4,
+                bad: 4
+    }
+        ]
+    },
+    {
+        q: "When interacting with others, I prefer to:",
+        a: [
+            {
+                ans: "Be the center of attention.",
+                ss: 4,
+                qa: 8,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Be the first to try new things.",
+                ss: 3,
+                qa: 9,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Be the one to initiate conversation.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "Be the one to listen and understand.",
+                ss: 8,
+                qa: 2,
+                cal: 7,
+                lin: 6,
+                pas: 10,
+                cac: 6,
+                cam: 2,
+                bad: 2
+            }
+        ]
+    },
+    {
+        q: "When I am in a group, I am usually the:",
+        a: [
+            {
+                ans: "Leader.",
+                ss: 4,
+                qa: 8,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Innovator.",
+                ss: 3,
+                qa: 9,
+                cal: 5,
+                lin: 4,
+                pas: 4,
+                cac: 5,
+                cam: 7,
+                bad: 9
+            },
+            {
+                ans: "Creator.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "Listener.",
+                ss: 8,
+                qa: 2,
+                cal: 7,
+                lin: 6,
+                pas: 10,
+                cac: 6,
+                cam: 2,
+                bad: 2
+            }
+        ]
+    },
+    {
+        q: "When faced with a difficult situation, I am usually:",
+        a: [
+            {
+                ans: "Able to see the big picture.",
+                ss: 9,
+                qa: 2,
+                cal: 9,
+                lin: 8,
+                pas: 5,
+                cac: 4,
+                cam: 4,
+                bad: 4
+            },
+            {
+                ans: "Able to see the details.",
+                ss: 8,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            },
+            {
+                ans: "Unsure of what to do initially.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "Too focused on the details.",
+                ss: 6,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            }
+        ]
+    },
+    {
+        q: "Do you tend to do things the traditional/safe way or do you try to find an easier way to do it?",
+        a: [
+            {
+                ans: "Traditional/safe way.",
+                ss: 8,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            },
+            {
+                ans: "Easier way.",
+                ss: 9,
+                qa: 2,
+                cal: 9,
+                lin: 8,
+                pas: 5,
+                cac: 4,
+                cam: 4,
+                bad: 4
+            },
+            {
+                ans: "Depends on the situation.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "I don't really care.",
+                ss: 6,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            }
+        ]
+    },
+    {
+        q: "Do you prefer a fast-paced environment or a slow-paced environment?",
+        a: [
+            {
+                ans: "Fast-paced.",
+                ss: 0,
+                qa: 10,
+                cal: 0,
+                lin: 0,
+                pas: 3,
+                cac: 4,
+                cam: 10,
+                bad: 10
+            },
+            {
+                ans: "Slow-paced.",
+                ss: 10,
+                qa: 0,
+                cal: 10,
+                lin: 10,
+                pas: 7,
+                cac: 6,
+                cam: 0,
+                bad: 0
+            },
+            {
+                ans: "Depends on the situation.",
+                ss: 5,
+                qa: 6,
+                cal: 8,
+                lin: 7,
+                pas: 5,
+                cac: 8,
+                cam: 5,
+                bad: 6
+            },
+            {
+                ans: "I don't really care.",
+                ss: 6,
+                qa: 4,
+                cal: 7,
+                lin: 6,
+                pas: 9,
+                cac: 8,
+                cam: 4,
+                bad: 5
+            }
+        ]
+    },
+    {
+        q: "When given free time, I usually:",
+        a: [
+            {
+                ans: "Do something productive.",
+                ss: 9,
+                qa: 2,
+                cal: 9,
+                lin: 8,
+                pas: 5,
+                cac: 4,
+                cam: 4,
+                bad: 4
+            },
+            {
+                ans: "Indulge in pleasureable activity.",
+                ss: 2,
+                qa: 6,
+                cal: 0,
+                lin: 7,
+                pas: 0,
+                cac: 0,
+                cam: 0,
+                bad: 0
+            },
+            {
+                ans: "Take a step back and reflect.",
+                ss: 10,
+                qa: 4,
+                cal: 10,
+                lin: 8,
+                pas: 8,
+                cac: 4,
+                cam: 2,
+                bad: 9,
+            },
+            {
+                ans: "Prefer mindless stimulation.",
+                ss: 0,
+                qa: 0,
+                cal: 0,
+                lin: 5,
+                pas: 2,
+                cac: 0,
+                cam: 1,
+                bad: 3,
+            }
+        ],
+    },
+];
+
+
+
 // var questions = [{q: }]
 
 // create an algorithm that finds which champions are the best match for the user
@@ -1430,12 +2172,10 @@ const Home = () => {
         cam_total += parseInt(e.target.getAttribute('cam'));
         bad_total += parseInt(e.target.getAttribute('bad'));
         
-        
 
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
         console.log(text);
-        
     }
 
     return (
@@ -1498,7 +2238,7 @@ const Home = () => {
                         Click on this.
                     </div>
                 </div>
-                
+
             </body>
         </div>
     );
