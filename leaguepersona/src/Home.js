@@ -2147,9 +2147,11 @@ function finalAnimations() {
     var img2 = document.getElementById("img2");
     var img3 = document.getElementById("img3");
     // change the source to closestChampArray[0][0] to lower case and add .png
-    img1.src = chArray[0].toLowerCase() + ".png";
-    img2.src = chArray[1].toLowerCase() + ".png";
-    img3.src = chArray[2].toLowerCase() + ".png";
+    // alert("the source is " + chArray[0].toLowerCase() + ".png")
+    // source is formatted as src={require("./res/img/icons/aatrox.png")}
+    img1.src = require("./res/img/icons/" + chArray[0].toLowerCase() + ".png");
+    img2.src = require("./res/img/icons/" + chArray[1].toLowerCase() + ".png");
+    img3.src = require("./res/img/icons/" + chArray[2].toLowerCase() + ".png");
     // change the text of the championContainer to the names of the champions
     var name1 = document.getElementById("cname1");
     var name2 = document.getElementById("cname2");
@@ -2269,17 +2271,17 @@ const Home = () => {
                     <div className="question">
                         <div className="questionText">What career path do you feel most inclined to pursue?</div>
                         <div id="opt" className="questionOptions">
-                            <div id="opt1" className="option" ss='3' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt1" className="option" ss='8' qa='0' cal='10' lin='7' pas='3' cac='8' cam='0' bad='2' onClick={(e) => changeText(e)}>
                                 Engineering
                             </div>
 
-                            <div id="opt2" className="option" ss='1' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt2" className="option" ss='10' qa='2' cal='3' lin='1' pas='8' cac='3' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Medicine
                             </div>
-                            <div id="opt3" className="option" ss='2' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt3" className="option" ss='2' qa='10' cal='5' lin='2' pas='0' cac='2' cam='10' bad='0' onClick={(e) => changeText(e)}>
                                 Business
                             </div>
-                            <div id="opt4" className="option" ss='3' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt4" className="option" ss='3' qa='6' cal='0' lin='0' pas='7' cac='0' cam='8' bad='0' onClick={(e) => changeText(e)}>
                                 Arts
                             </div>
                         </div>
