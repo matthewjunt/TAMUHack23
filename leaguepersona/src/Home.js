@@ -2176,9 +2176,11 @@ const Home = () => {
     
     const changeText = (e) => {
         question_count++;
-        if(question_count > 15){
-            championAlgorithm(ss_total, qa_total, cal_total, lin_total, pas_total, cac_total, cam_total, bad_total);
-            alert("Your results have been submitted. Thank you for taking the quiz!")
+        if(question_count > 14){
+            var ch = championAlgorithm(ss_total, qa_total, cal_total, lin_total, pas_total, cac_total, cam_total, bad_total);
+            //call final animations with the ch array 
+            finalAnimations();
+            //alert("Your results have been submitted. Thank you for taking the quiz!")
         }
         var opt1 = document.getElementById("opt1");
         var opt2 = document.getElementById("opt2");
