@@ -6,6 +6,16 @@ import Logo from './res/img/logo_.png';
 
 import './Base.css';
 
+var ss_total = 0;
+var qa_total = 0;
+var cal_total = 0;
+var lin_total = 0;
+var pas_total = 0;
+var cac_total = 0;
+var cam_total = 0;
+var bad_total = 0;
+var question_count = 0;
+
 // Champion Array to Determine Scores
 const champArray = [
     {
@@ -1381,34 +1391,32 @@ function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     return [closestChampArray[0][0], closestChampArray[1][0], closestChampArray[2][0]];
 }
 
-function one() {
-    //print the text that was clicked on 
-    console.log("opt1");
-    var div = document.getElementById("opt");
-    var text = div.innerHTML;
-    console.log(text);
-
-}
-
-function clicked(e) {
-    var div = e.target;
-    div.innerHTML = "New text";
-
-}
 
 const Home = () => {
     const navigate = useNavigate();
     
+    
     const changeText = (e) => {
+        question_count++;
+        if(question_count > 20){
+            championAlgorithm(ss_total, qa_total, cal_total, lin_total, pas_total, cac_total, cam_total, bad_total);
+            alert("Your results have been submitted. Thank you for taking the quiz!")
+        }
         var opt1 = document.getElementById("opt1");
-        var opt2 = opt1.nextSibling.innerHTML;
-        var op3 = opt1.nextSibling.nextSibling.innerHTML;
-        var opt4 = opt1.nextSibling.nextSibling.nextSibling.innerHTML;
-        console.log(opt1.innerHTML);
-        console.log(opt2);
-        console.log(op3);
-        console.log(opt4);
-
+        var opt2 = document.getElementById("opt2");
+        var opt3 = document.getElementById("opt3");
+        var opt4 = document.getElementById("opt4");
+        
+        ss_total += parseInt(e.target.getAttribute('ss'));
+        qa_total += parseInt(e.target.getAttribute('qa'));
+        cal_total += parseInt(e.target.getAttribute('cal'));
+        lin_total += parseInt(e.target.getAttribute('lin'));
+        pas_total += parseInt(e.target.getAttribute('pas'));
+        cac_total += parseInt(e.target.getAttribute('cac'));
+        cam_total += parseInt(e.target.getAttribute('cam'));
+        bad_total += parseInt(e.target.getAttribute('bad'));
+        
+        
 
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
@@ -1430,17 +1438,17 @@ const Home = () => {
                     <div className="question">
                         <div className="questionText">What career path do you feel most inclined to pursue?</div>
                         <div id="opt" className="questionOptions">
-                            <div id="opt1" className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt1" className="option" ss='3' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Engineering
                             </div>
 
-                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div className="option" ss='1' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Medicine
                             </div>
-                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div className="option" ss='2' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Business
                             </div>
-                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div className="option" ss='3' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Arts
                             </div>
                         </div>
