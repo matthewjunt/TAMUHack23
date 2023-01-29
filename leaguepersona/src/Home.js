@@ -2222,6 +2222,8 @@ const Home = () => {
         //q: how do i define it?
         //a: var opt2 = document.getElementById("opt2");
 
+        //print out target ss values
+        console.log(e.target.getAttribute('ss'));
 
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
