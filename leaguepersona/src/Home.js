@@ -1391,6 +1391,19 @@ function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     return [closestChampArray[0][0], closestChampArray[1][0], closestChampArray[2][0]];
 }
 
+// a function that applies the final animations to the page
+function finalAnimations() {
+    var championContainer = document.getElementsByClassName("championContainer")[0];
+    var questionContainer = document.getElementsByClassName("questionContainer")[0];
+    championContainer.style.display = "block";
+    championContainer.style.animation = "slide_up 2s 1";
+    questionContainer.style.animation = "slide_right 2s 1";
+    setTimeout(function() {
+        questionContainer.style.display = "none";
+    }
+    , 2000);
+}
+
 
 const Home = () => {
     const navigate = useNavigate();
@@ -1458,19 +1471,23 @@ const Home = () => {
                     <div id="spacer">SPACER</div>
                     <div className="champImageContainer">
                         <div className="champImage">
-                            <img src={require("./res/img/icons/aatrox.png")}></img>
+                            <img id="img" src={require("./res/img/icons/aatrox.png")}></img>
                             <div className="champName">Aatrox</div>
                         </div>
                         <div className="champImage">
-                            <img src={require("./res/img/icons/ahri.png")}></img>
+                            <img id="img" src={require("./res/img/icons/ahri.png")}></img>
                             <div className="champName">Ahri</div>
                         </div>
                         <div className="champImage">
-                            <img src={require("./res/img/icons/akali.png")}></img>
+                            <img id="img" src={require("./res/img/icons/akali.png")}></img>
                             <div className="champName">Akali</div>
                         </div>
                     </div>
                 </div>
+
+                {/* <div className="questionContainer" onClick={finalAnimations}>
+                    hi -> FOR TESTING PURPOSES, click this to apply finalAniamtion
+                </div> */}
 
             </body>
         </div>
