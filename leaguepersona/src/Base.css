@@ -1,0 +1,26 @@
+/*
+    Base.css
+    ========
+    @author:  @rishisant, @matthewjunt
+    @version: 0.1.0
+*/
+
+/*
+    Base Styles for Home Page
+    =========================
+    @desc: Contains all the base styles for the home page
+    and the base styles for the entire website.
+*/
+
+/* Font imports */
+@import url('https://fonts.cdnfonts.com/s/14269/friz-quadrata-regular-os-5870333951e7c.woff');
+
+/* Body */
+body {
+    font-family: 'Friz Quadrata', serif;
+    font-size: 1.5rem;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
