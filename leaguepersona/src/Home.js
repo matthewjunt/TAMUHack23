@@ -1362,6 +1362,8 @@ const champArray = [
     }
 ];
 
+var questions = [{q: }]
+
 // create an algorithm that finds which champions are the best match for the user
 function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     var closestChampArray = [];
