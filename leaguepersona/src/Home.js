@@ -18,6 +18,27 @@ const Home = () => {
                         Answer some questions and get a recommendation for your next League of Legends champion!
                     </div>
                 </div>
+
+                <div className="questionContainer">
+                    <div className="question">
+                        <div className="questionText">What career path do you feel most inclined to pursue?</div>
+                        <div className="questionOptions">
+                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0'>
+                                Engineering
+                            </div>
+                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0'>
+                                Medicine
+                            </div>
+                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0'>
+                                Business
+                            </div>
+                            <div className="option" ss='0' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0'>
+                                Arts
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </body>
         </div>
     );
