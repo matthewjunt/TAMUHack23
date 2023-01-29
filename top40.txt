@@ -1,3 +1,10 @@
+    javascript dictionary with value as the name of the character
+    var characters = {
+        "ISTJ" : "Aatrox", "Akali"
+
+    }
+    
+    
     Aatrox - ISTJ
     Ahri - ENFP
     Akali - ISTP
