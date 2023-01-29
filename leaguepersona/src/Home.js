@@ -14,6 +14,9 @@ const Home = () => {
             <body>
                 <div className="topContainer">
                     <div className="logo">LeaguePersona</div> 
+                    <div className="subtitle">
+                        Answer some questions and get a recommendation for your next League of Legends champion!
+                    </div>
                 </div>
             </body>
         </div>
