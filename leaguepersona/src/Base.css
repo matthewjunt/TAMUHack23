@@ -144,7 +144,17 @@ body {
     margin-bottom: 30px;
 }
 
-#img {
+#img1 {
+    animation: glow_dark 2.5s infinite;
+    border-radius: .2em;
+}
+
+#img2 {
+    animation: glow_dark 2.5s infinite;
+    border-radius: .2em;
+}
+
+#img3 {
     animation: glow_dark 2.5s infinite;
     border-radius: .2em;
 }
