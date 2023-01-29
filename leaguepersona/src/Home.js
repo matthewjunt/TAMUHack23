@@ -2130,12 +2130,34 @@ function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     }
     );
     // Console.log the top 3 champions
-    alert("The top 3 champions for you are: " + closestChampArray[0][0] + ", " + closestChampArray[1][0] + ", and " + closestChampArray[2][0] + ".")
+    // alert("The top 3 champions for you are: " + closestChampArray[0][0] + ", " + closestChampArray[1][0] + ", and " + closestChampArray[2][0] + ".")
     return [closestChampArray[0][0], closestChampArray[1][0], closestChampArray[2][0]];
 }
 
 // a function that applies the final animations to the page
 function finalAnimations() {
+    // prior to animations, grab the images of the closestChampArray as well as names to display on the championContainer elem
+    var questionLength = questions.length; 
+    // use average ss,qa,etc. to grab the closestChampArray
+    var chArray = championAlgorithm(ss_total/questionLength, qa_total/questionLength, cal_total/questionLength, lin_total/questionLength, pas_total/questionLength, cac_total/questionLength, cam_total/questionLength, bad_total/questionLength);
+    // change the images and champ text to the 3 elements in the chArray
+    // closestChampArray[0][0] is the name of the champion, so lowercase and add .png to the end
+    // change the src of the img elements to the correct image, img1 is arr[0], img2, arr[1], img3, arr[2]
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var img3 = document.getElementById("img3");
+    // change the source to closestChampArray[0][0] to lower case and add .png
+    img1.src = chArray[0].toLowerCase() + ".png";
+    img2.src = chArray[1].toLowerCase() + ".png";
+    img3.src = chArray[2].toLowerCase() + ".png";
+    // change the text of the championContainer to the names of the champions
+    var name1 = document.getElementById("cname1");
+    var name2 = document.getElementById("cname2");
+    var name3 = document.getElementById("cname3");
+    name1.innerHTML = chArray[0];
+    name2.innerHTML = chArray[1];
+    name3.innerHTML = chArray[2];
+    // apply the animations
     var championContainer = document.getElementsByClassName("championContainer")[0];
     var questionContainer = document.getElementsByClassName("questionContainer")[0];
     championContainer.style.display = "block";
@@ -2228,6 +2250,7 @@ const Home = () => {
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
         console.log(text);
+        
     }
 
     return (
@@ -2266,16 +2289,16 @@ const Home = () => {
                     <div id="spacer">SPACER</div>
                     <div className="champImageContainer">
                         <div className="champImage">
-                            <img id="img" src={require("./res/img/icons/aatrox.png")}></img>
-                            <div className="champName">Aatrox</div>
+                            <img id="img1" src={require("./res/img/icons/aatrox.png")}></img>
+                            <div id="cname1" className="champName">Aatrox</div>
                         </div>
                         <div className="champImage">
-                            <img id="img" src={require("./res/img/icons/ahri.png")}></img>
-                            <div className="champName">Ahri</div>
+                            <img id="img2" src={require("./res/img/icons/ahri.png")}></img>
+                            <div id="cname2" className="champName">Ahri</div>
                         </div>
                         <div className="champImage">
-                            <img id="img" src={require("./res/img/icons/akali.png")}></img>
-                            <div className="champName">Akali</div>
+                            <img id="img3" src={require("./res/img/icons/akali.png")}></img>
+                            <div id="cname3" className="champName">Akali</div>
                         </div>
                     </div>
                 </div>
