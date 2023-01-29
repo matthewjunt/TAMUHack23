@@ -1362,6 +1362,8 @@ const champArray = [
     }
 ];
 
+// var questions = [{q: }]
+
 // create an algorithm that finds which champions are the best match for the user
 function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     var closestChampArray = [];
@@ -1387,7 +1389,6 @@ function championAlgorithm(ss, qa, cal, lin, pas, cac, cam, bad) {
     );
     // Console.log the top 3 champions
     alert("The top 3 champions for you are: " + closestChampArray[0][0] + ", " + closestChampArray[1][0] + ", and " + closestChampArray[2][0] + ".")
-    // TODO: Grab each image -> alert(closestChampArray[0][0].toLowerCase() + ".png");
     return [closestChampArray[0][0], closestChampArray[1][0], closestChampArray[2][0]];
 }
 
@@ -1429,6 +1430,8 @@ const Home = () => {
         cam_total += parseInt(e.target.getAttribute('cam'));
         bad_total += parseInt(e.target.getAttribute('bad'));
         
+        
+
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
         console.log(text);
@@ -1489,6 +1492,12 @@ const Home = () => {
                     hi -> FOR TESTING PURPOSES, click this to apply finalAniamtion
                 </div> */}
 
+                <div className="questionContainer">
+                    Test the algorithm here!
+                    <div className="question" onClick={()=>championAlgorithm(10,10,10,10,10,10,10,10)}>
+                        Click on this.
+                    </div>
+                </div>
             </body>
         </div>
     );
