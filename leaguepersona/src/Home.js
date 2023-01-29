@@ -2154,7 +2154,7 @@ const Home = () => {
     
     const changeText = (e) => {
         question_count++;
-        if(question_count > 20){
+        if(question_count > 15){
             championAlgorithm(ss_total, qa_total, cal_total, lin_total, pas_total, cac_total, cam_total, bad_total);
             alert("Your results have been submitted. Thank you for taking the quiz!")
         }
@@ -2172,6 +2172,53 @@ const Home = () => {
         cam_total += parseInt(e.target.getAttribute('cam'));
         bad_total += parseInt(e.target.getAttribute('bad'));
         
+
+        //change each question text, option text, and option attributes
+        var questionText = document.getElementsByClassName("questionText")[0];
+        questionText.innerHTML = questions[question_count].q;
+        opt1.innerHTML = questions[question_count].a[0].ans;
+        opt1.setAttribute('ss', questions[question_count].a[0].ss);
+        opt1.setAttribute('qa', questions[question_count].a[0].qa);
+        opt1.setAttribute('cal', questions[question_count].a[0].cal);
+        opt1.setAttribute('lin', questions[question_count].a[0].lin);
+        opt1.setAttribute('pas', questions[question_count].a[0].pas);
+        opt1.setAttribute('cac', questions[question_count].a[0].cac);
+        opt1.setAttribute('cam', questions[question_count].a[0].cam);
+        opt1.setAttribute('bad', questions[question_count].a[0].bad);
+        opt2.innerHTML = questions[question_count].a[1].ans;
+        opt2.setAttribute('ss', questions[question_count].a[1].ss);
+        opt2.setAttribute('qa', questions[question_count].a[1].qa);
+        opt2.setAttribute('cal', questions[question_count].a[1].cal);
+        opt2.setAttribute('lin', questions[question_count].a[1].lin);
+        opt2.setAttribute('pas', questions[question_count].a[1].pas);
+        opt2.setAttribute('cac', questions[question_count].a[1].cac);
+        opt2.setAttribute('cam', questions[question_count].a[1].cam);
+        opt2.setAttribute('bad', questions[question_count].a[1].bad);
+        opt3.innerHTML = questions[question_count].a[2].ans;
+        opt3.setAttribute('ss', questions[question_count].a[2].ss);
+        opt3.setAttribute('qa', questions[question_count].a[2].qa);
+        opt3.setAttribute('cal', questions[question_count].a[2].cal);
+        opt3.setAttribute('lin', questions[question_count].a[2].lin);
+        opt3.setAttribute('pas', questions[question_count].a[2].pas);
+        opt3.setAttribute('cac', questions[question_count].a[2].cac);
+        opt3.setAttribute('cam', questions[question_count].a[2].cam);
+        opt3.setAttribute('bad', questions[question_count].a[2].bad);
+        opt4.innerHTML = questions[question_count].a[3].ans;
+        opt4.setAttribute('ss', questions[question_count].a[3].ss);
+        opt4.setAttribute('qa', questions[question_count].a[3].qa);
+        opt4.setAttribute('cal', questions[question_count].a[3].cal);
+        opt4.setAttribute('lin', questions[question_count].a[3].lin);
+        opt4.setAttribute('pas', questions[question_count].a[3].pas);
+        opt4.setAttribute('cac', questions[question_count].a[3].cac);
+        opt4.setAttribute('cam', questions[question_count].a[3].cam);
+        opt4.setAttribute('bad', questions[question_count].a[3].bad);
+        
+        console.log(opt1.innerHTML);
+        console.log(opt2.innerHTML);
+        console.log(opt3.innerHTML);
+        console.log(opt4.innerHTML);
+
+
 
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
