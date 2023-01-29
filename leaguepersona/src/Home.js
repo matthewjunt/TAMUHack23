@@ -2217,7 +2217,10 @@ const Home = () => {
         console.log(opt2.innerHTML);
         console.log(opt3.innerHTML);
         console.log(opt4.innerHTML);
-
+        //q: why does it say opt2 is null?
+        //a: because it's not defined yet. you need to define it first.
+        //q: how do i define it?
+        //a: var opt2 = document.getElementById("opt2");
 
 
         var clickedDiv = e.target;
@@ -2243,13 +2246,13 @@ const Home = () => {
                                 Engineering
                             </div>
 
-                            <div className="option" ss='1' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt2" className="option" ss='1' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Medicine
                             </div>
-                            <div className="option" ss='2' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt3" className="option" ss='2' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Business
                             </div>
-                            <div className="option" ss='3' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
+                            <div id="opt4" className="option" ss='3' qa='0' cal='0' lin='0' pas='0' cac='0' cam='0' bad='0' onClick={(e) => changeText(e)}>
                                 Arts
                             </div>
                         </div>
