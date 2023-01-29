@@ -1416,8 +1416,6 @@ const Home = () => {
         cam_total += parseInt(e.target.getAttribute('cam'));
         bad_total += parseInt(e.target.getAttribute('bad'));
         
-        
-
         var clickedDiv = e.target;
         var text = clickedDiv.innerHTML;
         console.log(text);
